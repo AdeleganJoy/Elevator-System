@@ -1,0 +1,1510 @@
+
+GccApplication19.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000002  00800100  0000080a  0000089e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000080a  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000000c  00800102  00800102  000008a0  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000008a0  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000008d0  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000080  00000000  00000000  00000910  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   0000102b  00000000  00000000  00000990  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000007cb  00000000  00000000  000019bb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000008fb  00000000  00000000  00002186  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  0000015c  00000000  00000000  00002a84  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000051e  00000000  00000000  00002be0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000984  00000000  00000000  000030fe  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000088  00000000  00000000  00003a82  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 47 00 	jmp	0x8e	; 0x8e <__ctors_end>
+   4:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+   8:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+   c:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  10:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  14:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  18:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  1c:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  20:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  24:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  28:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  2c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__vector_11>
+  30:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  34:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  38:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  3c:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  40:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  44:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  48:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  4c:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  50:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  54:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  58:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  5c:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  60:	0c 94 af 02 	jmp	0x55e	; 0x55e <__vector_24>
+  64:	0c 94 64 00 	jmp	0xc8	; 0xc8 <__bad_interrupt>
+  68:	89 00       	.word	0x0089	; ????
+  6a:	a2 00       	.word	0x00a2	; ????
+  6c:	b3 00       	.word	0x00b3	; ????
+  6e:	cc 00       	.word	0x00cc	; ????
+  70:	dd 00       	.word	0x00dd	; ????
+  72:	fe 00       	.word	0x00fe	; ????
+  74:	0e 01       	movw	r0, r28
+  76:	26 01       	movw	r4, r12
+  78:	79 03       	fmul	r23, r17
+  7a:	7f 03       	fmul	r23, r23
+  7c:	7f 03       	fmul	r23, r23
+  7e:	83 03       	fmuls	r16, r19
+  80:	87 03       	fmuls	r16, r23
+  82:	8b 03       	fmulsu	r16, r19
+  84:	92 03       	fmuls	r17, r18
+  86:	96 03       	fmuls	r17, r22
+  88:	99 03       	fmulsu	r17, r17
+  8a:	9c 03       	fmulsu	r17, r20
+  8c:	c2 03       	fmuls	r20, r18
+
+0000008e <__ctors_end>:
+  8e:	11 24       	eor	r1, r1
+  90:	1f be       	out	0x3f, r1	; 63
+  92:	cf ef       	ldi	r28, 0xFF	; 255
+  94:	d8 e0       	ldi	r29, 0x08	; 8
+  96:	de bf       	out	0x3e, r29	; 62
+  98:	cd bf       	out	0x3d, r28	; 61
+
+0000009a <__do_copy_data>:
+  9a:	11 e0       	ldi	r17, 0x01	; 1
+  9c:	a0 e0       	ldi	r26, 0x00	; 0
+  9e:	b1 e0       	ldi	r27, 0x01	; 1
+  a0:	ea e0       	ldi	r30, 0x0A	; 10
+  a2:	f8 e0       	ldi	r31, 0x08	; 8
+  a4:	02 c0       	rjmp	.+4      	; 0xaa <__do_copy_data+0x10>
+  a6:	05 90       	lpm	r0, Z+
+  a8:	0d 92       	st	X+, r0
+  aa:	a2 30       	cpi	r26, 0x02	; 2
+  ac:	b1 07       	cpc	r27, r17
+  ae:	d9 f7       	brne	.-10     	; 0xa6 <__do_copy_data+0xc>
+
+000000b0 <__do_clear_bss>:
+  b0:	21 e0       	ldi	r18, 0x01	; 1
+  b2:	a2 e0       	ldi	r26, 0x02	; 2
+  b4:	b1 e0       	ldi	r27, 0x01	; 1
+  b6:	01 c0       	rjmp	.+2      	; 0xba <.do_clear_bss_start>
+
+000000b8 <.do_clear_bss_loop>:
+  b8:	1d 92       	st	X+, r1
+
+000000ba <.do_clear_bss_start>:
+  ba:	ae 30       	cpi	r26, 0x0E	; 14
+  bc:	b2 07       	cpc	r27, r18
+  be:	e1 f7       	brne	.-8      	; 0xb8 <.do_clear_bss_loop>
+  c0:	0e 94 c8 03 	call	0x790	; 0x790 <main>
+  c4:	0c 94 03 04 	jmp	0x806	; 0x806 <_exit>
+
+000000c8 <__bad_interrupt>:
+  c8:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000cc <__vector_11>:
+volatile uint8_t melody_step = 0;
+volatile uint8_t melody_enabled = 0;
+volatile uint8_t continuous_melody = 1;  // For "Final level" - melody continues until stopped
+
+// ISR for Timer1 Compare Match A - Used for melody timing
+ISR(TIMER1_COMPA_vect) {
+  cc:	1f 92       	push	r1
+  ce:	0f 92       	push	r0
+  d0:	0f b6       	in	r0, 0x3f	; 63
+  d2:	0f 92       	push	r0
+  d4:	11 24       	eor	r1, r1
+  d6:	2f 93       	push	r18
+  d8:	8f 93       	push	r24
+  da:	9f 93       	push	r25
+  dc:	af 93       	push	r26
+  de:	bf 93       	push	r27
+  e0:	ef 93       	push	r30
+  e2:	ff 93       	push	r31
+    static uint8_t tone_state = 0;
+    static uint8_t tone_counter = 0;
+    
+    if (melody_enabled && melody_playing) {
+  e4:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <melody_enabled>
+  e8:	88 23       	and	r24, r24
+  ea:	09 f4       	brne	.+2      	; 0xee <__vector_11+0x22>
+  ec:	d6 c0       	rjmp	.+428    	; 0x29a <__vector_11+0x1ce>
+  ee:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <melody_playing>
+  f2:	88 23       	and	r24, r24
+  f4:	09 f4       	brne	.+2      	; 0xf8 <__vector_11+0x2c>
+  f6:	d1 c0       	rjmp	.+418    	; 0x29a <__vector_11+0x1ce>
+        // More complex beep pattern for emergency melody
+        switch (melody_step) {
+  f8:	e0 91 06 01 	lds	r30, 0x0106	; 0x800106 <melody_step>
+  fc:	8e 2f       	mov	r24, r30
+  fe:	90 e0       	ldi	r25, 0x00	; 0
+ 100:	88 30       	cpi	r24, 0x08	; 8
+ 102:	91 05       	cpc	r25, r1
+ 104:	08 f0       	brcs	.+2      	; 0x108 <__vector_11+0x3c>
+ 106:	bb c0       	rjmp	.+374    	; 0x27e <__vector_11+0x1b2>
+ 108:	fc 01       	movw	r30, r24
+ 10a:	ec 5c       	subi	r30, 0xCC	; 204
+ 10c:	ff 4f       	sbci	r31, 0xFF	; 255
+ 10e:	0c 94 ee 03 	jmp	0x7dc	; 0x7dc <__tablejump2__>
+            case 0:  // First note - high frequency
+                if (tone_state == 0) {
+ 112:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <tone_state.1921>
+ 116:	81 11       	cpse	r24, r1
+ 118:	04 c0       	rjmp	.+8      	; 0x122 <__vector_11+0x56>
+                    BUZZER_PORT |= (1 << BUZZER_PIN);
+ 11a:	85 b1       	in	r24, 0x05	; 5
+ 11c:	84 60       	ori	r24, 0x04	; 4
+ 11e:	85 b9       	out	0x05, r24	; 5
+ 120:	03 c0       	rjmp	.+6      	; 0x128 <__vector_11+0x5c>
+                } else {
+                    BUZZER_PORT &= ~(1 << BUZZER_PIN);
+ 122:	85 b1       	in	r24, 0x05	; 5
+ 124:	8b 7f       	andi	r24, 0xFB	; 251
+ 126:	85 b9       	out	0x05, r24	; 5
+                }
+                
+                tone_counter++;
+ 128:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <tone_counter.1922>
+ 12c:	8f 5f       	subi	r24, 0xFF	; 255
+ 12e:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <tone_counter.1922>
+                if (tone_counter >= 10) {  // Changed length for better audibility
+ 132:	8a 30       	cpi	r24, 0x0A	; 10
+ 134:	08 f4       	brcc	.+2      	; 0x138 <__vector_11+0x6c>
+ 136:	a3 c0       	rjmp	.+326    	; 0x27e <__vector_11+0x1b2>
+                    tone_counter = 0;
+ 138:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <tone_counter.1922>
+                    melody_step = 1;
+ 13c:	81 e0       	ldi	r24, 0x01	; 1
+ 13e:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <melody_step>
+ 142:	9d c0       	rjmp	.+314    	; 0x27e <__vector_11+0x1b2>
+                }
+                break;
+                
+            case 1:  // Short pause between notes
+                BUZZER_PORT &= ~(1 << BUZZER_PIN);
+ 144:	85 b1       	in	r24, 0x05	; 5
+ 146:	8b 7f       	andi	r24, 0xFB	; 251
+ 148:	85 b9       	out	0x05, r24	; 5
+                tone_counter++;
+ 14a:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <tone_counter.1922>
+ 14e:	8f 5f       	subi	r24, 0xFF	; 255
+ 150:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <tone_counter.1922>
+                if (tone_counter >= 5) {
+ 154:	85 30       	cpi	r24, 0x05	; 5
+ 156:	08 f4       	brcc	.+2      	; 0x15a <__vector_11+0x8e>
+ 158:	92 c0       	rjmp	.+292    	; 0x27e <__vector_11+0x1b2>
+                    tone_counter = 0;
+ 15a:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <tone_counter.1922>
+                    melody_step = 2;
+ 15e:	82 e0       	ldi	r24, 0x02	; 2
+ 160:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <melody_step>
+ 164:	8c c0       	rjmp	.+280    	; 0x27e <__vector_11+0x1b2>
+                }
+                break;
+                
+            case 2:  // Second note - mid frequency
+                if (tone_state == 0) {
+ 166:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <tone_state.1921>
+ 16a:	81 11       	cpse	r24, r1
+ 16c:	04 c0       	rjmp	.+8      	; 0x176 <__vector_11+0xaa>
+                    BUZZER_PORT |= (1 << BUZZER_PIN);
+ 16e:	85 b1       	in	r24, 0x05	; 5
+ 170:	84 60       	ori	r24, 0x04	; 4
+ 172:	85 b9       	out	0x05, r24	; 5
+ 174:	03 c0       	rjmp	.+6      	; 0x17c <__vector_11+0xb0>
+                } else {
+                    BUZZER_PORT &= ~(1 << BUZZER_PIN);
+ 176:	85 b1       	in	r24, 0x05	; 5
+ 178:	8b 7f       	andi	r24, 0xFB	; 251
+ 17a:	85 b9       	out	0x05, r24	; 5
+                }
+                
+                tone_counter++;
+ 17c:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <tone_counter.1922>
+ 180:	8f 5f       	subi	r24, 0xFF	; 255
+ 182:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <tone_counter.1922>
+                if (tone_counter >= 15) {  // Longer note
+ 186:	8f 30       	cpi	r24, 0x0F	; 15
+ 188:	08 f4       	brcc	.+2      	; 0x18c <__vector_11+0xc0>
+ 18a:	79 c0       	rjmp	.+242    	; 0x27e <__vector_11+0x1b2>
+                    tone_counter = 0;
+ 18c:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <tone_counter.1922>
+                    melody_step = 3;
+ 190:	83 e0       	ldi	r24, 0x03	; 3
+ 192:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <melody_step>
+ 196:	73 c0       	rjmp	.+230    	; 0x27e <__vector_11+0x1b2>
+                }
+                break;
+                
+            case 3:  // Another pause
+                BUZZER_PORT &= ~(1 << BUZZER_PIN);
+ 198:	85 b1       	in	r24, 0x05	; 5
+ 19a:	8b 7f       	andi	r24, 0xFB	; 251
+ 19c:	85 b9       	out	0x05, r24	; 5
+                tone_counter++;
+ 19e:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <tone_counter.1922>
+ 1a2:	8f 5f       	subi	r24, 0xFF	; 255
+ 1a4:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <tone_counter.1922>
+                if (tone_counter >= 5) {
+ 1a8:	85 30       	cpi	r24, 0x05	; 5
+ 1aa:	08 f4       	brcc	.+2      	; 0x1ae <__vector_11+0xe2>
+ 1ac:	68 c0       	rjmp	.+208    	; 0x27e <__vector_11+0x1b2>
+                    tone_counter = 0;
+ 1ae:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <tone_counter.1922>
+                    melody_step = 4;
+ 1b2:	84 e0       	ldi	r24, 0x04	; 4
+ 1b4:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <melody_step>
+ 1b8:	62 c0       	rjmp	.+196    	; 0x27e <__vector_11+0x1b2>
+                }
+                break;
+                
+            case 4:  // Third note - low frequency
+                if ((tone_state % 3) == 0) {  // Slower oscillation for lower perceived frequency
+ 1ba:	90 91 04 01 	lds	r25, 0x0104	; 0x800104 <tone_state.1921>
+ 1be:	8b ea       	ldi	r24, 0xAB	; 171
+ 1c0:	98 9f       	mul	r25, r24
+ 1c2:	81 2d       	mov	r24, r1
+ 1c4:	11 24       	eor	r1, r1
+ 1c6:	86 95       	lsr	r24
+ 1c8:	28 2f       	mov	r18, r24
+ 1ca:	22 0f       	add	r18, r18
+ 1cc:	82 0f       	add	r24, r18
+ 1ce:	98 13       	cpse	r25, r24
+ 1d0:	04 c0       	rjmp	.+8      	; 0x1da <__vector_11+0x10e>
+                    BUZZER_PORT |= (1 << BUZZER_PIN);
+ 1d2:	85 b1       	in	r24, 0x05	; 5
+ 1d4:	84 60       	ori	r24, 0x04	; 4
+ 1d6:	85 b9       	out	0x05, r24	; 5
+ 1d8:	03 c0       	rjmp	.+6      	; 0x1e0 <__vector_11+0x114>
+                } else {
+                    BUZZER_PORT &= ~(1 << BUZZER_PIN);
+ 1da:	85 b1       	in	r24, 0x05	; 5
+ 1dc:	8b 7f       	andi	r24, 0xFB	; 251
+ 1de:	85 b9       	out	0x05, r24	; 5
+                }
+                
+                tone_counter++;
+ 1e0:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <tone_counter.1922>
+ 1e4:	8f 5f       	subi	r24, 0xFF	; 255
+ 1e6:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <tone_counter.1922>
+                if (tone_counter >= 20) {  // Even longer note
+ 1ea:	84 31       	cpi	r24, 0x14	; 20
+ 1ec:	08 f4       	brcc	.+2      	; 0x1f0 <__vector_11+0x124>
+ 1ee:	47 c0       	rjmp	.+142    	; 0x27e <__vector_11+0x1b2>
+                    tone_counter = 0;
+ 1f0:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <tone_counter.1922>
+                    melody_step = 5;
+ 1f4:	85 e0       	ldi	r24, 0x05	; 5
+ 1f6:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <melody_step>
+ 1fa:	41 c0       	rjmp	.+130    	; 0x27e <__vector_11+0x1b2>
+                }
+                break;
+                
+            case 5:  // Final pause
+                BUZZER_PORT &= ~(1 << BUZZER_PIN);
+ 1fc:	85 b1       	in	r24, 0x05	; 5
+ 1fe:	8b 7f       	andi	r24, 0xFB	; 251
+ 200:	85 b9       	out	0x05, r24	; 5
+                tone_counter++;
+ 202:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <tone_counter.1922>
+ 206:	8f 5f       	subi	r24, 0xFF	; 255
+ 208:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <tone_counter.1922>
+                if (tone_counter >= 5) {
+ 20c:	85 30       	cpi	r24, 0x05	; 5
+ 20e:	b8 f1       	brcs	.+110    	; 0x27e <__vector_11+0x1b2>
+                    tone_counter = 0;
+ 210:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <tone_counter.1922>
+                    melody_step = 6;
+ 214:	86 e0       	ldi	r24, 0x06	; 6
+ 216:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <melody_step>
+ 21a:	31 c0       	rjmp	.+98     	; 0x27e <__vector_11+0x1b2>
+                }
+                break;
+                
+            case 6:  // Fourth note - Urgent beeping
+                if (tone_state == 0) {
+ 21c:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <tone_state.1921>
+ 220:	81 11       	cpse	r24, r1
+ 222:	04 c0       	rjmp	.+8      	; 0x22c <__vector_11+0x160>
+                    BUZZER_PORT |= (1 << BUZZER_PIN);
+ 224:	85 b1       	in	r24, 0x05	; 5
+ 226:	84 60       	ori	r24, 0x04	; 4
+ 228:	85 b9       	out	0x05, r24	; 5
+ 22a:	03 c0       	rjmp	.+6      	; 0x232 <__vector_11+0x166>
+                } else {
+                    BUZZER_PORT &= ~(1 << BUZZER_PIN);
+ 22c:	85 b1       	in	r24, 0x05	; 5
+ 22e:	8b 7f       	andi	r24, 0xFB	; 251
+ 230:	85 b9       	out	0x05, r24	; 5
+                }
+                
+                tone_counter++;
+ 232:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <tone_counter.1922>
+ 236:	8f 5f       	subi	r24, 0xFF	; 255
+ 238:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <tone_counter.1922>
+                if (tone_counter >= 30) {  // Longest note
+ 23c:	8e 31       	cpi	r24, 0x1E	; 30
+ 23e:	f8 f0       	brcs	.+62     	; 0x27e <__vector_11+0x1b2>
+                    tone_counter = 0;
+ 240:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <tone_counter.1922>
+                    melody_step = 7;
+ 244:	87 e0       	ldi	r24, 0x07	; 7
+ 246:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <melody_step>
+ 24a:	19 c0       	rjmp	.+50     	; 0x27e <__vector_11+0x1b2>
+                }
+                break;
+                
+            case 7:  // End of melody
+                BUZZER_PORT &= ~(1 << BUZZER_PIN);
+ 24c:	85 b1       	in	r24, 0x05	; 5
+ 24e:	8b 7f       	andi	r24, 0xFB	; 251
+ 250:	85 b9       	out	0x05, r24	; 5
+                
+                // If continuous mode, restart from beginning (For "Final level")
+                if (continuous_melody) {
+ 252:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 256:	88 23       	and	r24, r24
+ 258:	71 f0       	breq	.+28     	; 0x276 <__vector_11+0x1aa>
+                    melody_step = 0;
+ 25a:	10 92 06 01 	sts	0x0106, r1	; 0x800106 <melody_step>
+                    tone_counter = 0;
+ 25e:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <tone_counter.1922>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 262:	2f ef       	ldi	r18, 0xFF	; 255
+ 264:	83 ec       	ldi	r24, 0xC3	; 195
+ 266:	99 e0       	ldi	r25, 0x09	; 9
+ 268:	21 50       	subi	r18, 0x01	; 1
+ 26a:	80 40       	sbci	r24, 0x00	; 0
+ 26c:	90 40       	sbci	r25, 0x00	; 0
+ 26e:	e1 f7       	brne	.-8      	; 0x268 <__vector_11+0x19c>
+ 270:	00 c0       	rjmp	.+0      	; 0x272 <__vector_11+0x1a6>
+ 272:	00 00       	nop
+ 274:	04 c0       	rjmp	.+8      	; 0x27e <__vector_11+0x1b2>
+                    _delay_ms(200);  // Short pause between melody repetitions
+                } else {
+                    melody_playing = 0;
+ 276:	10 92 0a 01 	sts	0x010A, r1	; 0x80010a <melody_playing>
+                    melody_enabled = 0;
+ 27a:	10 92 05 01 	sts	0x0105, r1	; 0x800105 <melody_enabled>
+                }
+                break;
+        }
+        
+        // Toggle tone state for pulse width modulation effect
+        tone_state = (tone_state + 1) % 4;  // Using modulo 4 for more variety in tones
+ 27e:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <tone_state.1921>
+ 282:	90 e0       	ldi	r25, 0x00	; 0
+ 284:	01 96       	adiw	r24, 0x01	; 1
+ 286:	83 70       	andi	r24, 0x03	; 3
+ 288:	90 78       	andi	r25, 0x80	; 128
+ 28a:	99 23       	and	r25, r25
+ 28c:	24 f4       	brge	.+8      	; 0x296 <__vector_11+0x1ca>
+ 28e:	01 97       	sbiw	r24, 0x01	; 1
+ 290:	8c 6f       	ori	r24, 0xFC	; 252
+ 292:	9f 6f       	ori	r25, 0xFF	; 255
+ 294:	01 96       	adiw	r24, 0x01	; 1
+ 296:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <tone_state.1921>
+    }
+}
+ 29a:	ff 91       	pop	r31
+ 29c:	ef 91       	pop	r30
+ 29e:	bf 91       	pop	r27
+ 2a0:	af 91       	pop	r26
+ 2a2:	9f 91       	pop	r25
+ 2a4:	8f 91       	pop	r24
+ 2a6:	2f 91       	pop	r18
+ 2a8:	0f 90       	pop	r0
+ 2aa:	0f be       	out	0x3f, r0	; 63
+ 2ac:	0f 90       	pop	r0
+ 2ae:	1f 90       	pop	r1
+ 2b0:	18 95       	reti
+
+000002b2 <TWI_init_slave>:
+}
+
+// Initialize TWI as slave
+void TWI_init_slave(uint8_t address) {
+    // Set slave address
+    TWAR = address << 1;
+ 2b2:	88 0f       	add	r24, r24
+ 2b4:	80 93 ba 00 	sts	0x00BA, r24	; 0x8000ba <__TEXT_REGION_LENGTH__+0x7f80ba>
+    
+    // Enable TWI, enable acknowledgment, and enable TWI interrupt
+    TWCR = (1 << TWEN) | (1 << TWEA) | (1 << TWIE);
+ 2b8:	85 e4       	ldi	r24, 0x45	; 69
+ 2ba:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+ 2be:	08 95       	ret
+
+000002c0 <beep>:
+}
+
+// Simple beep function with fixed duration
+void beep(uint8_t duration_ms) {
+    BUZZER_PORT |= (1 << BUZZER_PIN);
+ 2c0:	95 b1       	in	r25, 0x05	; 5
+ 2c2:	94 60       	ori	r25, 0x04	; 4
+ 2c4:	95 b9       	out	0x05, r25	; 5
+    
+    // Use fixed delays only
+    if (duration_ms == 50) {
+ 2c6:	82 33       	cpi	r24, 0x32	; 50
+ 2c8:	51 f4       	brne	.+20     	; 0x2de <beep+0x1e>
+ 2ca:	2f ef       	ldi	r18, 0xFF	; 255
+ 2cc:	80 e7       	ldi	r24, 0x70	; 112
+ 2ce:	92 e0       	ldi	r25, 0x02	; 2
+ 2d0:	21 50       	subi	r18, 0x01	; 1
+ 2d2:	80 40       	sbci	r24, 0x00	; 0
+ 2d4:	90 40       	sbci	r25, 0x00	; 0
+ 2d6:	e1 f7       	brne	.-8      	; 0x2d0 <beep+0x10>
+ 2d8:	00 c0       	rjmp	.+0      	; 0x2da <beep+0x1a>
+ 2da:	00 00       	nop
+ 2dc:	21 c0       	rjmp	.+66     	; 0x320 <beep+0x60>
+        _delay_ms(50);
+    } else if (duration_ms == 100) {
+ 2de:	84 36       	cpi	r24, 0x64	; 100
+ 2e0:	51 f4       	brne	.+20     	; 0x2f6 <beep+0x36>
+ 2e2:	2f ef       	ldi	r18, 0xFF	; 255
+ 2e4:	81 ee       	ldi	r24, 0xE1	; 225
+ 2e6:	94 e0       	ldi	r25, 0x04	; 4
+ 2e8:	21 50       	subi	r18, 0x01	; 1
+ 2ea:	80 40       	sbci	r24, 0x00	; 0
+ 2ec:	90 40       	sbci	r25, 0x00	; 0
+ 2ee:	e1 f7       	brne	.-8      	; 0x2e8 <beep+0x28>
+ 2f0:	00 c0       	rjmp	.+0      	; 0x2f2 <beep+0x32>
+ 2f2:	00 00       	nop
+ 2f4:	15 c0       	rjmp	.+42     	; 0x320 <beep+0x60>
+        _delay_ms(100);
+    } else if (duration_ms == 200) {
+ 2f6:	88 3c       	cpi	r24, 0xC8	; 200
+ 2f8:	51 f4       	brne	.+20     	; 0x30e <beep+0x4e>
+ 2fa:	2f ef       	ldi	r18, 0xFF	; 255
+ 2fc:	83 ec       	ldi	r24, 0xC3	; 195
+ 2fe:	99 e0       	ldi	r25, 0x09	; 9
+ 300:	21 50       	subi	r18, 0x01	; 1
+ 302:	80 40       	sbci	r24, 0x00	; 0
+ 304:	90 40       	sbci	r25, 0x00	; 0
+ 306:	e1 f7       	brne	.-8      	; 0x300 <beep+0x40>
+ 308:	00 c0       	rjmp	.+0      	; 0x30a <beep+0x4a>
+ 30a:	00 00       	nop
+ 30c:	09 c0       	rjmp	.+18     	; 0x320 <beep+0x60>
+ 30e:	2f ef       	ldi	r18, 0xFF	; 255
+ 310:	81 ee       	ldi	r24, 0xE1	; 225
+ 312:	94 e0       	ldi	r25, 0x04	; 4
+ 314:	21 50       	subi	r18, 0x01	; 1
+ 316:	80 40       	sbci	r24, 0x00	; 0
+ 318:	90 40       	sbci	r25, 0x00	; 0
+ 31a:	e1 f7       	brne	.-8      	; 0x314 <beep+0x54>
+ 31c:	00 c0       	rjmp	.+0      	; 0x31e <beep+0x5e>
+ 31e:	00 00       	nop
+    } else {
+        // Default delay (100ms)
+        _delay_ms(100);
+    }
+    
+    BUZZER_PORT &= ~(1 << BUZZER_PIN);
+ 320:	85 b1       	in	r24, 0x05	; 5
+ 322:	8b 7f       	andi	r24, 0xFB	; 251
+ 324:	85 b9       	out	0x05, r24	; 5
+ 326:	08 95       	ret
+
+00000328 <blink_movement_led>:
+}
+
+// Blink movement LED given number of times
+void blink_movement_led(uint8_t times) {
+    // First, ensure LED is off
+    MOVEMENT_LED_PORT &= ~(1 << MOVEMENT_LED_PIN);
+ 328:	95 b1       	in	r25, 0x05	; 5
+ 32a:	9e 7f       	andi	r25, 0xFE	; 254
+ 32c:	95 b9       	out	0x05, r25	; 5
+    
+    for (uint8_t i = 0; i < times; i++) {
+ 32e:	20 e0       	ldi	r18, 0x00	; 0
+ 330:	19 c0       	rjmp	.+50     	; 0x364 <blink_movement_led+0x3c>
+        // Turn on LED
+        MOVEMENT_LED_PORT |= (1 << MOVEMENT_LED_PIN);
+ 332:	95 b1       	in	r25, 0x05	; 5
+ 334:	91 60       	ori	r25, 0x01	; 1
+ 336:	95 b9       	out	0x05, r25	; 5
+ 338:	3f ef       	ldi	r19, 0xFF	; 255
+ 33a:	43 ec       	ldi	r20, 0xC3	; 195
+ 33c:	99 e0       	ldi	r25, 0x09	; 9
+ 33e:	31 50       	subi	r19, 0x01	; 1
+ 340:	40 40       	sbci	r20, 0x00	; 0
+ 342:	90 40       	sbci	r25, 0x00	; 0
+ 344:	e1 f7       	brne	.-8      	; 0x33e <blink_movement_led+0x16>
+ 346:	00 c0       	rjmp	.+0      	; 0x348 <blink_movement_led+0x20>
+ 348:	00 00       	nop
+        _delay_ms(200);
+        
+        // Turn off LED
+        MOVEMENT_LED_PORT &= ~(1 << MOVEMENT_LED_PIN);
+ 34a:	95 b1       	in	r25, 0x05	; 5
+ 34c:	9e 7f       	andi	r25, 0xFE	; 254
+ 34e:	95 b9       	out	0x05, r25	; 5
+ 350:	3f ef       	ldi	r19, 0xFF	; 255
+ 352:	43 ec       	ldi	r20, 0xC3	; 195
+ 354:	99 e0       	ldi	r25, 0x09	; 9
+ 356:	31 50       	subi	r19, 0x01	; 1
+ 358:	40 40       	sbci	r20, 0x00	; 0
+ 35a:	90 40       	sbci	r25, 0x00	; 0
+ 35c:	e1 f7       	brne	.-8      	; 0x356 <blink_movement_led+0x2e>
+ 35e:	00 c0       	rjmp	.+0      	; 0x360 <blink_movement_led+0x38>
+ 360:	00 00       	nop
+// Blink movement LED given number of times
+void blink_movement_led(uint8_t times) {
+    // First, ensure LED is off
+    MOVEMENT_LED_PORT &= ~(1 << MOVEMENT_LED_PIN);
+    
+    for (uint8_t i = 0; i < times; i++) {
+ 362:	2f 5f       	subi	r18, 0xFF	; 255
+ 364:	28 17       	cp	r18, r24
+ 366:	28 f3       	brcs	.-54     	; 0x332 <blink_movement_led+0xa>
+        
+        // Turn off LED
+        MOVEMENT_LED_PORT &= ~(1 << MOVEMENT_LED_PIN);
+        _delay_ms(200);
+    }
+}
+ 368:	08 95       	ret
+
+0000036a <measure_distance>:
+uint16_t measure_distance(void) {
+    uint16_t duration = 0;
+    uint16_t distance = 0;
+    
+    // Ensure trigger pin is low
+    TRIG_PORT &= ~(1 << TRIG_PIN);
+ 36a:	8b b1       	in	r24, 0x0b	; 11
+ 36c:	8f 7e       	andi	r24, 0xEF	; 239
+ 36e:	8b b9       	out	0x0b, r24	; 11
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 370:	2a e0       	ldi	r18, 0x0A	; 10
+ 372:	2a 95       	dec	r18
+ 374:	f1 f7       	brne	.-4      	; 0x372 <measure_distance+0x8>
+ 376:	00 c0       	rjmp	.+0      	; 0x378 <measure_distance+0xe>
+    _delay_us(2);
+    
+    // Send 10us pulse to trigger
+    TRIG_PORT |= (1 << TRIG_PIN);
+ 378:	8b b1       	in	r24, 0x0b	; 11
+ 37a:	80 61       	ori	r24, 0x10	; 16
+ 37c:	8b b9       	out	0x0b, r24	; 11
+ 37e:	85 e3       	ldi	r24, 0x35	; 53
+ 380:	8a 95       	dec	r24
+ 382:	f1 f7       	brne	.-4      	; 0x380 <measure_distance+0x16>
+ 384:	00 00       	nop
+    _delay_us(10);
+    TRIG_PORT &= ~(1 << TRIG_PIN);
+ 386:	8b b1       	in	r24, 0x0b	; 11
+ 388:	8f 7e       	andi	r24, 0xEF	; 239
+ 38a:	8b b9       	out	0x0b, r24	; 11
+    }
+}
+
+// Measure distance using ultrasonic sensor HC-SR04
+uint16_t measure_distance(void) {
+    uint16_t duration = 0;
+ 38c:	80 e0       	ldi	r24, 0x00	; 0
+ 38e:	90 e0       	ldi	r25, 0x00	; 0
+    TRIG_PORT |= (1 << TRIG_PIN);
+    _delay_us(10);
+    TRIG_PORT &= ~(1 << TRIG_PIN);
+    
+    // Wait for echo to go high
+    while (!(ECHO_PIN & (1 << ECHO_BIT))) {
+ 390:	09 c0       	rjmp	.+18     	; 0x3a4 <measure_distance+0x3a>
+        if (duration > 30000) { // Timeout after ~30ms (5m range)
+ 392:	81 33       	cpi	r24, 0x31	; 49
+ 394:	25 e7       	ldi	r18, 0x75	; 117
+ 396:	92 07       	cpc	r25, r18
+ 398:	08 f5       	brcc	.+66     	; 0x3dc <measure_distance+0x72>
+            return 0;
+        }
+        duration++;
+ 39a:	01 96       	adiw	r24, 0x01	; 1
+ 39c:	25 e0       	ldi	r18, 0x05	; 5
+ 39e:	2a 95       	dec	r18
+ 3a0:	f1 f7       	brne	.-4      	; 0x39e <measure_distance+0x34>
+ 3a2:	00 00       	nop
+    TRIG_PORT |= (1 << TRIG_PIN);
+    _delay_us(10);
+    TRIG_PORT &= ~(1 << TRIG_PIN);
+    
+    // Wait for echo to go high
+    while (!(ECHO_PIN & (1 << ECHO_BIT))) {
+ 3a4:	4d 9b       	sbis	0x09, 5	; 9
+ 3a6:	f5 cf       	rjmp	.-22     	; 0x392 <measure_distance+0x28>
+ 3a8:	20 e0       	ldi	r18, 0x00	; 0
+ 3aa:	30 e0       	ldi	r19, 0x00	; 0
+ 3ac:	0a c0       	rjmp	.+20     	; 0x3c2 <measure_distance+0x58>
+    
+    duration = 0;
+    
+    // Measure pulse width (echo high time)
+    while (ECHO_PIN & (1 << ECHO_BIT)) {
+        duration++;
+ 3ae:	2f 5f       	subi	r18, 0xFF	; 255
+ 3b0:	3f 4f       	sbci	r19, 0xFF	; 255
+ 3b2:	85 e0       	ldi	r24, 0x05	; 5
+ 3b4:	8a 95       	dec	r24
+ 3b6:	f1 f7       	brne	.-4      	; 0x3b4 <measure_distance+0x4a>
+ 3b8:	00 00       	nop
+        _delay_us(1);
+        if (duration > 30000) { // Timeout after ~30ms (5m range)
+ 3ba:	21 33       	cpi	r18, 0x31	; 49
+ 3bc:	85 e7       	ldi	r24, 0x75	; 117
+ 3be:	38 07       	cpc	r19, r24
+ 3c0:	80 f4       	brcc	.+32     	; 0x3e2 <measure_distance+0x78>
+    }
+    
+    duration = 0;
+    
+    // Measure pulse width (echo high time)
+    while (ECHO_PIN & (1 << ECHO_BIT)) {
+ 3c2:	4d 99       	sbic	0x09, 5	; 9
+ 3c4:	f4 cf       	rjmp	.-24     	; 0x3ae <measure_distance+0x44>
+        }
+    }
+    
+    // Calculate distance in cm: duration * speed of sound (343m/s) / 2
+    // Using simplified formula: distance = duration / 58
+    distance = duration / 58;
+ 3c6:	af e9       	ldi	r26, 0x9F	; 159
+ 3c8:	b6 e4       	ldi	r27, 0x46	; 70
+ 3ca:	0e 94 f4 03 	call	0x7e8	; 0x7e8 <__umulhisi3>
+ 3ce:	92 95       	swap	r25
+ 3d0:	82 95       	swap	r24
+ 3d2:	8f 70       	andi	r24, 0x0F	; 15
+ 3d4:	89 27       	eor	r24, r25
+ 3d6:	9f 70       	andi	r25, 0x0F	; 15
+ 3d8:	89 27       	eor	r24, r25
+    
+    return distance;
+ 3da:	08 95       	ret
+    TRIG_PORT &= ~(1 << TRIG_PIN);
+    
+    // Wait for echo to go high
+    while (!(ECHO_PIN & (1 << ECHO_BIT))) {
+        if (duration > 30000) { // Timeout after ~30ms (5m range)
+            return 0;
+ 3dc:	80 e0       	ldi	r24, 0x00	; 0
+ 3de:	90 e0       	ldi	r25, 0x00	; 0
+ 3e0:	08 95       	ret
+    // Measure pulse width (echo high time)
+    while (ECHO_PIN & (1 << ECHO_BIT)) {
+        duration++;
+        _delay_us(1);
+        if (duration > 30000) { // Timeout after ~30ms (5m range)
+            return 0;
+ 3e2:	80 e0       	ldi	r24, 0x00	; 0
+ 3e4:	90 e0       	ldi	r25, 0x00	; 0
+    // Calculate distance in cm: duration * speed of sound (343m/s) / 2
+    // Using simplified formula: distance = duration / 58
+    distance = duration / 58;
+    
+    return distance;
+}
+ 3e6:	08 95       	ret
+
+000003e8 <test_outputs>:
+}
+
+// Test all outputs to verify hardware connections
+void test_outputs(void) {
+    // Test movement LED
+    MOVEMENT_LED_PORT |= (1 << MOVEMENT_LED_PIN);
+ 3e8:	85 b1       	in	r24, 0x05	; 5
+ 3ea:	81 60       	ori	r24, 0x01	; 1
+ 3ec:	85 b9       	out	0x05, r24	; 5
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 3ee:	2f ef       	ldi	r18, 0xFF	; 255
+ 3f0:	89 e6       	ldi	r24, 0x69	; 105
+ 3f2:	98 e1       	ldi	r25, 0x18	; 24
+ 3f4:	21 50       	subi	r18, 0x01	; 1
+ 3f6:	80 40       	sbci	r24, 0x00	; 0
+ 3f8:	90 40       	sbci	r25, 0x00	; 0
+ 3fa:	e1 f7       	brne	.-8      	; 0x3f4 <test_outputs+0xc>
+ 3fc:	00 c0       	rjmp	.+0      	; 0x3fe <test_outputs+0x16>
+ 3fe:	00 00       	nop
+    _delay_ms(500);
+    MOVEMENT_LED_PORT &= ~(1 << MOVEMENT_LED_PIN);
+ 400:	85 b1       	in	r24, 0x05	; 5
+ 402:	8e 7f       	andi	r24, 0xFE	; 254
+ 404:	85 b9       	out	0x05, r24	; 5
+    
+    // Test door LED
+    DOOR_LED_PORT |= (1 << DOOR_LED_PIN);
+ 406:	85 b1       	in	r24, 0x05	; 5
+ 408:	82 60       	ori	r24, 0x02	; 2
+ 40a:	85 b9       	out	0x05, r24	; 5
+ 40c:	2f ef       	ldi	r18, 0xFF	; 255
+ 40e:	89 e6       	ldi	r24, 0x69	; 105
+ 410:	98 e1       	ldi	r25, 0x18	; 24
+ 412:	21 50       	subi	r18, 0x01	; 1
+ 414:	80 40       	sbci	r24, 0x00	; 0
+ 416:	90 40       	sbci	r25, 0x00	; 0
+ 418:	e1 f7       	brne	.-8      	; 0x412 <__EEPROM_REGION_LENGTH__+0x12>
+ 41a:	00 c0       	rjmp	.+0      	; 0x41c <__EEPROM_REGION_LENGTH__+0x1c>
+ 41c:	00 00       	nop
+    _delay_ms(500);
+    DOOR_LED_PORT &= ~(1 << DOOR_LED_PIN);
+ 41e:	85 b1       	in	r24, 0x05	; 5
+ 420:	8d 7f       	andi	r24, 0xFD	; 253
+ 422:	85 b9       	out	0x05, r24	; 5
+    
+    // Test buzzer with two short beeps
+    BUZZER_PORT |= (1 << BUZZER_PIN);
+ 424:	85 b1       	in	r24, 0x05	; 5
+ 426:	84 60       	ori	r24, 0x04	; 4
+ 428:	85 b9       	out	0x05, r24	; 5
+ 42a:	2f ef       	ldi	r18, 0xFF	; 255
+ 42c:	83 ec       	ldi	r24, 0xC3	; 195
+ 42e:	99 e0       	ldi	r25, 0x09	; 9
+ 430:	21 50       	subi	r18, 0x01	; 1
+ 432:	80 40       	sbci	r24, 0x00	; 0
+ 434:	90 40       	sbci	r25, 0x00	; 0
+ 436:	e1 f7       	brne	.-8      	; 0x430 <__EEPROM_REGION_LENGTH__+0x30>
+ 438:	00 c0       	rjmp	.+0      	; 0x43a <__EEPROM_REGION_LENGTH__+0x3a>
+ 43a:	00 00       	nop
+    _delay_ms(200);
+    BUZZER_PORT &= ~(1 << BUZZER_PIN);
+ 43c:	85 b1       	in	r24, 0x05	; 5
+ 43e:	8b 7f       	andi	r24, 0xFB	; 251
+ 440:	85 b9       	out	0x05, r24	; 5
+ 442:	2f ef       	ldi	r18, 0xFF	; 255
+ 444:	83 ec       	ldi	r24, 0xC3	; 195
+ 446:	99 e0       	ldi	r25, 0x09	; 9
+ 448:	21 50       	subi	r18, 0x01	; 1
+ 44a:	80 40       	sbci	r24, 0x00	; 0
+ 44c:	90 40       	sbci	r25, 0x00	; 0
+ 44e:	e1 f7       	brne	.-8      	; 0x448 <__EEPROM_REGION_LENGTH__+0x48>
+ 450:	00 c0       	rjmp	.+0      	; 0x452 <__EEPROM_REGION_LENGTH__+0x52>
+ 452:	00 00       	nop
+    _delay_ms(200);
+    BUZZER_PORT |= (1 << BUZZER_PIN);
+ 454:	85 b1       	in	r24, 0x05	; 5
+ 456:	84 60       	ori	r24, 0x04	; 4
+ 458:	85 b9       	out	0x05, r24	; 5
+ 45a:	2f ef       	ldi	r18, 0xFF	; 255
+ 45c:	83 ec       	ldi	r24, 0xC3	; 195
+ 45e:	99 e0       	ldi	r25, 0x09	; 9
+ 460:	21 50       	subi	r18, 0x01	; 1
+ 462:	80 40       	sbci	r24, 0x00	; 0
+ 464:	90 40       	sbci	r25, 0x00	; 0
+ 466:	e1 f7       	brne	.-8      	; 0x460 <__EEPROM_REGION_LENGTH__+0x60>
+ 468:	00 c0       	rjmp	.+0      	; 0x46a <__EEPROM_REGION_LENGTH__+0x6a>
+ 46a:	00 00       	nop
+    _delay_ms(200);
+    BUZZER_PORT &= ~(1 << BUZZER_PIN);
+ 46c:	85 b1       	in	r24, 0x05	; 5
+ 46e:	8b 7f       	andi	r24, 0xFB	; 251
+ 470:	85 b9       	out	0x05, r24	; 5
+    
+    // Test ultrasonic sensor
+    measure_distance();
+ 472:	0e 94 b5 01 	call	0x36a	; 0x36a <measure_distance>
+ 476:	08 95       	ret
+
+00000478 <system_init>:
+}
+
+// Initialize the system
+void system_init(void) {
+    // Configure LED and buzzer pins as outputs
+    MOVEMENT_LED_DDR |= (1 << MOVEMENT_LED_PIN);
+ 478:	84 b1       	in	r24, 0x04	; 4
+ 47a:	81 60       	ori	r24, 0x01	; 1
+ 47c:	84 b9       	out	0x04, r24	; 4
+    DOOR_LED_DDR |= (1 << DOOR_LED_PIN);
+ 47e:	84 b1       	in	r24, 0x04	; 4
+ 480:	82 60       	ori	r24, 0x02	; 2
+ 482:	84 b9       	out	0x04, r24	; 4
+    BUZZER_DDR |= (1 << BUZZER_PIN);
+ 484:	84 b1       	in	r24, 0x04	; 4
+ 486:	84 60       	ori	r24, 0x04	; 4
+ 488:	84 b9       	out	0x04, r24	; 4
+    
+    // Configure ultrasonic sensor pins
+    TRIG_DDR |= (1 << TRIG_PIN);      // TRIG as output
+ 48a:	8a b1       	in	r24, 0x0a	; 10
+ 48c:	80 61       	ori	r24, 0x10	; 16
+ 48e:	8a b9       	out	0x0a, r24	; 10
+    ECHO_DDR &= ~(1 << ECHO_BIT);     // ECHO as input
+ 490:	8a b1       	in	r24, 0x0a	; 10
+ 492:	8f 7d       	andi	r24, 0xDF	; 223
+ 494:	8a b9       	out	0x0a, r24	; 10
+    
+    // Initialize all outputs to LOW
+    MOVEMENT_LED_PORT &= ~(1 << MOVEMENT_LED_PIN);
+ 496:	85 b1       	in	r24, 0x05	; 5
+ 498:	8e 7f       	andi	r24, 0xFE	; 254
+ 49a:	85 b9       	out	0x05, r24	; 5
+    DOOR_LED_PORT &= ~(1 << DOOR_LED_PIN);
+ 49c:	85 b1       	in	r24, 0x05	; 5
+ 49e:	8d 7f       	andi	r24, 0xFD	; 253
+ 4a0:	85 b9       	out	0x05, r24	; 5
+    BUZZER_PORT &= ~(1 << BUZZER_PIN);
+ 4a2:	85 b1       	in	r24, 0x05	; 5
+ 4a4:	8b 7f       	andi	r24, 0xFB	; 251
+ 4a6:	85 b9       	out	0x05, r24	; 5
+    TRIG_PORT &= ~(1 << TRIG_PIN);    // Ensure TRIG starts LOW
+ 4a8:	8b b1       	in	r24, 0x0b	; 11
+ 4aa:	8f 7e       	andi	r24, 0xEF	; 239
+ 4ac:	8b b9       	out	0x0b, r24	; 11
+    
+    // Initialize TWI as slave
+    TWI_init_slave(SLAVE_ADDR);
+ 4ae:	80 e1       	ldi	r24, 0x10	; 16
+ 4b0:	0e 94 59 01 	call	0x2b2	; 0x2b2 <TWI_init_slave>
+    
+    // Initialize Timer1 for melody generation
+    // CTC mode, prescaler 64
+    TCCR1A = 0;
+ 4b4:	10 92 80 00 	sts	0x0080, r1	; 0x800080 <__TEXT_REGION_LENGTH__+0x7f8080>
+    TCCR1B = (1 << WGM12) | (1 << CS11) | (1 << CS10);
+ 4b8:	8b e0       	ldi	r24, 0x0B	; 11
+ 4ba:	80 93 81 00 	sts	0x0081, r24	; 0x800081 <__TEXT_REGION_LENGTH__+0x7f8081>
+    OCR1A = 12499;  // For approximately 0.05 second intervals: 16MHz/64/12500 = 20Hz
+ 4be:	83 ed       	ldi	r24, 0xD3	; 211
+ 4c0:	90 e3       	ldi	r25, 0x30	; 48
+ 4c2:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7f8089>
+ 4c6:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7f8088>
+    TIMSK1 |= (1 << OCIE1A);  // Enable Timer1 Compare Match A interrupt
+ 4ca:	ef e6       	ldi	r30, 0x6F	; 111
+ 4cc:	f0 e0       	ldi	r31, 0x00	; 0
+ 4ce:	80 81       	ld	r24, Z
+ 4d0:	82 60       	ori	r24, 0x02	; 2
+ 4d2:	80 83       	st	Z, r24
+    
+    // Enable global interrupts
+    sei();
+ 4d4:	78 94       	sei
+    
+    // Initialize state variables
+    emergency_state = 0;
+ 4d6:	10 92 09 01 	sts	0x0109, r1	; 0x800109 <emergency_state>
+    melody_playing = 0;
+ 4da:	10 92 0a 01 	sts	0x010A, r1	; 0x80010a <melody_playing>
+    melody_enabled = 0;
+ 4de:	10 92 05 01 	sts	0x0105, r1	; 0x800105 <melody_enabled>
+    
+    // Test all outputs to verify hardware
+    test_outputs();
+ 4e2:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <test_outputs>
+ 4e6:	08 95       	ret
+
+000004e8 <play_emergency_melody>:
+    return distance;
+}
+
+// Play emergency melody - with continuous mode for "Final level"
+void play_emergency_melody(void) {
+    melody_step = 0;          // Start from first note
+ 4e8:	10 92 06 01 	sts	0x0106, r1	; 0x800106 <melody_step>
+    melody_enabled = 1;       // Enable melody in timer ISR
+ 4ec:	81 e0       	ldi	r24, 0x01	; 1
+ 4ee:	80 93 05 01 	sts	0x0105, r24	; 0x800105 <melody_enabled>
+    melody_playing = 1;       // Set flag that melody is playing
+ 4f2:	80 93 0a 01 	sts	0x010A, r24	; 0x80010a <melody_playing>
+    continuous_melody = 1;    // Set continuous mode for emergency
+ 4f6:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+    
+    // Make an immediate confirmation sound
+    BUZZER_PORT |= (1 << BUZZER_PIN);
+ 4fa:	85 b1       	in	r24, 0x05	; 5
+ 4fc:	84 60       	ori	r24, 0x04	; 4
+ 4fe:	85 b9       	out	0x05, r24	; 5
+ 500:	2f ef       	ldi	r18, 0xFF	; 255
+ 502:	83 ec       	ldi	r24, 0xC3	; 195
+ 504:	99 e0       	ldi	r25, 0x09	; 9
+ 506:	21 50       	subi	r18, 0x01	; 1
+ 508:	80 40       	sbci	r24, 0x00	; 0
+ 50a:	90 40       	sbci	r25, 0x00	; 0
+ 50c:	e1 f7       	brne	.-8      	; 0x506 <play_emergency_melody+0x1e>
+ 50e:	00 c0       	rjmp	.+0      	; 0x510 <play_emergency_melody+0x28>
+ 510:	00 00       	nop
+    _delay_ms(200);
+    BUZZER_PORT &= ~(1 << BUZZER_PIN);
+ 512:	85 b1       	in	r24, 0x05	; 5
+ 514:	8b 7f       	andi	r24, 0xFB	; 251
+ 516:	85 b9       	out	0x05, r24	; 5
+ 518:	2f ef       	ldi	r18, 0xFF	; 255
+ 51a:	81 ee       	ldi	r24, 0xE1	; 225
+ 51c:	94 e0       	ldi	r25, 0x04	; 4
+ 51e:	21 50       	subi	r18, 0x01	; 1
+ 520:	80 40       	sbci	r24, 0x00	; 0
+ 522:	90 40       	sbci	r25, 0x00	; 0
+ 524:	e1 f7       	brne	.-8      	; 0x51e <play_emergency_melody+0x36>
+ 526:	00 c0       	rjmp	.+0      	; 0x528 <play_emergency_melody+0x40>
+ 528:	00 00       	nop
+    _delay_ms(100);
+    BUZZER_PORT |= (1 << BUZZER_PIN);
+ 52a:	85 b1       	in	r24, 0x05	; 5
+ 52c:	84 60       	ori	r24, 0x04	; 4
+ 52e:	85 b9       	out	0x05, r24	; 5
+ 530:	2f ef       	ldi	r18, 0xFF	; 255
+ 532:	81 ee       	ldi	r24, 0xE1	; 225
+ 534:	94 e0       	ldi	r25, 0x04	; 4
+ 536:	21 50       	subi	r18, 0x01	; 1
+ 538:	80 40       	sbci	r24, 0x00	; 0
+ 53a:	90 40       	sbci	r25, 0x00	; 0
+ 53c:	e1 f7       	brne	.-8      	; 0x536 <play_emergency_melody+0x4e>
+ 53e:	00 c0       	rjmp	.+0      	; 0x540 <play_emergency_melody+0x58>
+ 540:	00 00       	nop
+    _delay_ms(100);
+    BUZZER_PORT &= ~(1 << BUZZER_PIN);
+ 542:	85 b1       	in	r24, 0x05	; 5
+ 544:	8b 7f       	andi	r24, 0xFB	; 251
+ 546:	85 b9       	out	0x05, r24	; 5
+ 548:	08 95       	ret
+
+0000054a <stop_melody>:
+}
+
+// Stop the melody
+void stop_melody(void) {
+    melody_enabled = 0;       // Disable melody in timer ISR
+ 54a:	10 92 05 01 	sts	0x0105, r1	; 0x800105 <melody_enabled>
+    melody_playing = 0;       // Clear flag
+ 54e:	10 92 0a 01 	sts	0x010A, r1	; 0x80010a <melody_playing>
+    continuous_melody = 0;    // Disable continuous mode
+ 552:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
+    BUZZER_PORT &= ~(1 << BUZZER_PIN);  // Ensure buzzer is off
+ 556:	85 b1       	in	r24, 0x05	; 5
+ 558:	8b 7f       	andi	r24, 0xFB	; 251
+ 55a:	85 b9       	out	0x05, r24	; 5
+ 55c:	08 95       	ret
+
+0000055e <__vector_24>:
+        tone_state = (tone_state + 1) % 4;  // Using modulo 4 for more variety in tones
+    }
+}
+
+// ISR for TWI communication (I2C)
+ISR(TWI_vect) {
+ 55e:	1f 92       	push	r1
+ 560:	0f 92       	push	r0
+ 562:	0f b6       	in	r0, 0x3f	; 63
+ 564:	0f 92       	push	r0
+ 566:	11 24       	eor	r1, r1
+ 568:	2f 93       	push	r18
+ 56a:	3f 93       	push	r19
+ 56c:	4f 93       	push	r20
+ 56e:	5f 93       	push	r21
+ 570:	6f 93       	push	r22
+ 572:	7f 93       	push	r23
+ 574:	8f 93       	push	r24
+ 576:	9f 93       	push	r25
+ 578:	af 93       	push	r26
+ 57a:	bf 93       	push	r27
+ 57c:	ef 93       	push	r30
+ 57e:	ff 93       	push	r31
+    static uint8_t twi_state = 0;
+    
+    // Get TWI status
+    uint8_t status = TWSR & 0xF8;
+ 580:	80 91 b9 00 	lds	r24, 0x00B9	; 0x8000b9 <__TEXT_REGION_LENGTH__+0x7f80b9>
+ 584:	88 7f       	andi	r24, 0xF8	; 248
+    
+    switch (status) {
+ 586:	80 38       	cpi	r24, 0x80	; 128
+ 588:	89 f0       	breq	.+34     	; 0x5ac <__vector_24+0x4e>
+ 58a:	30 f4       	brcc	.+12     	; 0x598 <__vector_24+0x3a>
+ 58c:	88 23       	and	r24, r24
+ 58e:	09 f4       	brne	.+2      	; 0x592 <__vector_24+0x34>
+ 590:	6a c0       	rjmp	.+212    	; 0x666 <__vector_24+0x108>
+ 592:	80 36       	cpi	r24, 0x60	; 96
+ 594:	41 f0       	breq	.+16     	; 0x5a6 <__vector_24+0x48>
+ 596:	6b c0       	rjmp	.+214    	; 0x66e <__vector_24+0x110>
+ 598:	88 3a       	cpi	r24, 0xA8	; 168
+ 59a:	09 f4       	brne	.+2      	; 0x59e <__vector_24+0x40>
+ 59c:	48 c0       	rjmp	.+144    	; 0x62e <__vector_24+0xd0>
+ 59e:	88 3b       	cpi	r24, 0xB8	; 184
+ 5a0:	09 f4       	brne	.+2      	; 0x5a4 <__vector_24+0x46>
+ 5a2:	53 c0       	rjmp	.+166    	; 0x64a <__vector_24+0xec>
+ 5a4:	64 c0       	rjmp	.+200    	; 0x66e <__vector_24+0x110>
+        // Slave Receiver mode
+        case TW_SR_SLA_ACK:       // 0x60: SLA+W received, ACK returned
+            twi_state = 0;        // Reset state for new command
+ 5a6:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <__data_end>
+            break;
+ 5aa:	66 c0       	rjmp	.+204    	; 0x678 <__vector_24+0x11a>
+            
+        case TW_SR_DATA_ACK:      // 0x80: Data received, ACK returned
+            if (twi_state == 0) {
+ 5ac:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <__data_end>
+ 5b0:	81 11       	cpse	r24, r1
+ 5b2:	08 c0       	rjmp	.+16     	; 0x5c4 <__vector_24+0x66>
+                command = TWDR;   // First byte is command
+ 5b4:	80 91 bb 00 	lds	r24, 0x00BB	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
+ 5b8:	80 93 0d 01 	sts	0x010D, r24	; 0x80010d <command>
+                twi_state = 1;
+ 5bc:	81 e0       	ldi	r24, 0x01	; 1
+ 5be:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <__data_end>
+ 5c2:	5a c0       	rjmp	.+180    	; 0x678 <__vector_24+0x11a>
+            } else if (twi_state == 1) {
+ 5c4:	81 30       	cpi	r24, 0x01	; 1
+ 5c6:	09 f0       	breq	.+2      	; 0x5ca <__vector_24+0x6c>
+ 5c8:	57 c0       	rjmp	.+174    	; 0x678 <__vector_24+0x11a>
+                data = TWDR;      // Second byte is data
+ 5ca:	80 91 bb 00 	lds	r24, 0x00BB	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
+ 5ce:	80 93 0c 01 	sts	0x010C, r24	; 0x80010c <data>
+                command_received = 1;
+ 5d2:	81 e0       	ldi	r24, 0x01	; 1
+ 5d4:	80 93 0b 01 	sts	0x010B, r24	; 0x80010b <command_received>
+                twi_state = 0;
+ 5d8:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <__data_end>
+                
+                // Process critical commands immediately
+                if (command == CMD_DOOR_OPEN) {
+ 5dc:	80 91 0d 01 	lds	r24, 0x010D	; 0x80010d <command>
+ 5e0:	83 30       	cpi	r24, 0x03	; 3
+ 5e2:	21 f4       	brne	.+8      	; 0x5ec <__vector_24+0x8e>
+                    DOOR_LED_PORT |= (1 << DOOR_LED_PIN);  // Turn on door LED immediately
+ 5e4:	85 b1       	in	r24, 0x05	; 5
+ 5e6:	82 60       	ori	r24, 0x02	; 2
+ 5e8:	85 b9       	out	0x05, r24	; 5
+ 5ea:	46 c0       	rjmp	.+140    	; 0x678 <__vector_24+0x11a>
+                } else if (command == CMD_DOOR_CLOSE) {
+ 5ec:	80 91 0d 01 	lds	r24, 0x010D	; 0x80010d <command>
+ 5f0:	84 30       	cpi	r24, 0x04	; 4
+ 5f2:	21 f4       	brne	.+8      	; 0x5fc <__vector_24+0x9e>
+                    DOOR_LED_PORT &= ~(1 << DOOR_LED_PIN);  // Turn off door LED immediately
+ 5f4:	85 b1       	in	r24, 0x05	; 5
+ 5f6:	8d 7f       	andi	r24, 0xFD	; 253
+ 5f8:	85 b9       	out	0x05, r24	; 5
+ 5fa:	3e c0       	rjmp	.+124    	; 0x678 <__vector_24+0x11a>
+                } else if (command == CMD_PLAY_MELODY) {
+ 5fc:	80 91 0d 01 	lds	r24, 0x010D	; 0x80010d <command>
+ 600:	87 30       	cpi	r24, 0x07	; 7
+ 602:	19 f4       	brne	.+6      	; 0x60a <__vector_24+0xac>
+                    play_emergency_melody();  // Start melody immediately
+ 604:	0e 94 74 02 	call	0x4e8	; 0x4e8 <play_emergency_melody>
+ 608:	37 c0       	rjmp	.+110    	; 0x678 <__vector_24+0x11a>
+                } else if (command == CMD_STOP_MELODY) {
+ 60a:	80 91 0d 01 	lds	r24, 0x010D	; 0x80010d <command>
+ 60e:	88 30       	cpi	r24, 0x08	; 8
+ 610:	19 f4       	brne	.+6      	; 0x618 <__vector_24+0xba>
+                    stop_melody();  // Stop melody immediately
+ 612:	0e 94 a5 02 	call	0x54a	; 0x54a <stop_melody>
+ 616:	30 c0       	rjmp	.+96     	; 0x678 <__vector_24+0x11a>
+                } else if (command == CMD_CHECK_DISTANCE) {
+ 618:	80 91 0d 01 	lds	r24, 0x010D	; 0x80010d <command>
+ 61c:	8b 30       	cpi	r24, 0x0B	; 11
+ 61e:	61 f5       	brne	.+88     	; 0x678 <__vector_24+0x11a>
+                    // Perform distance measurement immediately
+                    distance_cm = measure_distance();
+ 620:	0e 94 b5 01 	call	0x36a	; 0x36a <measure_distance>
+ 624:	90 93 08 01 	sts	0x0108, r25	; 0x800108 <distance_cm+0x1>
+ 628:	80 93 07 01 	sts	0x0107, r24	; 0x800107 <distance_cm>
+ 62c:	25 c0       	rjmp	.+74     	; 0x678 <__vector_24+0x11a>
+            }
+            break;
+            
+        case TW_ST_SLA_ACK:       // 0xA8: SLA+R received, ACK returned
+            // Prepare data to send back to master
+            if (command == CMD_CHECK_DISTANCE) {
+ 62e:	80 91 0d 01 	lds	r24, 0x010D	; 0x80010d <command>
+ 632:	8b 30       	cpi	r24, 0x0B	; 11
+ 634:	39 f4       	brne	.+14     	; 0x644 <__vector_24+0xe6>
+                // Return the lower byte of distance measurement
+                TWDR = (uint8_t)(distance_cm & 0xFF);
+ 636:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <distance_cm>
+ 63a:	90 91 08 01 	lds	r25, 0x0108	; 0x800108 <distance_cm+0x1>
+ 63e:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
+ 642:	1a c0       	rjmp	.+52     	; 0x678 <__vector_24+0x11a>
+            } else {
+                // Default response
+                TWDR = 0;
+ 644:	10 92 bb 00 	sts	0x00BB, r1	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
+ 648:	17 c0       	rjmp	.+46     	; 0x678 <__vector_24+0x11a>
+            }
+            break;
+            
+        case TW_ST_DATA_ACK:      // 0xB8: Data transmitted, ACK received
+            // If master wants more data, send the upper byte of distance
+            if (command == CMD_CHECK_DISTANCE) {
+ 64a:	80 91 0d 01 	lds	r24, 0x010D	; 0x80010d <command>
+ 64e:	8b 30       	cpi	r24, 0x0B	; 11
+ 650:	39 f4       	brne	.+14     	; 0x660 <__vector_24+0x102>
+                TWDR = (uint8_t)(distance_cm >> 8);
+ 652:	80 91 07 01 	lds	r24, 0x0107	; 0x800107 <distance_cm>
+ 656:	90 91 08 01 	lds	r25, 0x0108	; 0x800108 <distance_cm+0x1>
+ 65a:	90 93 bb 00 	sts	0x00BB, r25	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
+ 65e:	0c c0       	rjmp	.+24     	; 0x678 <__vector_24+0x11a>
+            } else {
+                TWDR = 0;
+ 660:	10 92 bb 00 	sts	0x00BB, r1	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
+ 664:	09 c0       	rjmp	.+18     	; 0x678 <__vector_24+0x11a>
+            }
+            break;
+            
+        case TW_BUS_ERROR:        // 0x00: Bus error
+            // Reset TWI interface
+            TWCR = (1 << TWSTO) | (1 << TWINT) | (1 << TWEN) | (1 << TWIE);
+ 666:	85 e9       	ldi	r24, 0x95	; 149
+ 668:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+            break;
+ 66c:	05 c0       	rjmp	.+10     	; 0x678 <__vector_24+0x11a>
+            
+        default:
+            // Clear interrupt flag to continue
+            TWCR |= (1 << TWINT);
+ 66e:	ec eb       	ldi	r30, 0xBC	; 188
+ 670:	f0 e0       	ldi	r31, 0x00	; 0
+ 672:	80 81       	ld	r24, Z
+ 674:	80 68       	ori	r24, 0x80	; 128
+ 676:	80 83       	st	Z, r24
+            break;
+    }
+    
+    // Clear interrupt and keep TWI enabled with acknowledgment
+    TWCR = (1 << TWINT) | (1 << TWEA) | (1 << TWEN) | (1 << TWIE);
+ 678:	85 ec       	ldi	r24, 0xC5	; 197
+ 67a:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+}
+ 67e:	ff 91       	pop	r31
+ 680:	ef 91       	pop	r30
+ 682:	bf 91       	pop	r27
+ 684:	af 91       	pop	r26
+ 686:	9f 91       	pop	r25
+ 688:	8f 91       	pop	r24
+ 68a:	7f 91       	pop	r23
+ 68c:	6f 91       	pop	r22
+ 68e:	5f 91       	pop	r21
+ 690:	4f 91       	pop	r20
+ 692:	3f 91       	pop	r19
+ 694:	2f 91       	pop	r18
+ 696:	0f 90       	pop	r0
+ 698:	0f be       	out	0x3f, r0	; 63
+ 69a:	0f 90       	pop	r0
+ 69c:	1f 90       	pop	r1
+ 69e:	18 95       	reti
+
+000006a0 <play_floor_reach_tone>:
+}
+
+// Play a tone pattern when floor is reached
+void play_floor_reach_tone(void) {
+    // Three beeps for floor reached
+    beep(100);
+ 6a0:	84 e6       	ldi	r24, 0x64	; 100
+ 6a2:	0e 94 60 01 	call	0x2c0	; 0x2c0 <beep>
+ 6a6:	2f ef       	ldi	r18, 0xFF	; 255
+ 6a8:	80 e7       	ldi	r24, 0x70	; 112
+ 6aa:	92 e0       	ldi	r25, 0x02	; 2
+ 6ac:	21 50       	subi	r18, 0x01	; 1
+ 6ae:	80 40       	sbci	r24, 0x00	; 0
+ 6b0:	90 40       	sbci	r25, 0x00	; 0
+ 6b2:	e1 f7       	brne	.-8      	; 0x6ac <play_floor_reach_tone+0xc>
+ 6b4:	00 c0       	rjmp	.+0      	; 0x6b6 <play_floor_reach_tone+0x16>
+ 6b6:	00 00       	nop
+    _delay_ms(50);
+    beep(100);
+ 6b8:	84 e6       	ldi	r24, 0x64	; 100
+ 6ba:	0e 94 60 01 	call	0x2c0	; 0x2c0 <beep>
+ 6be:	2f ef       	ldi	r18, 0xFF	; 255
+ 6c0:	80 e7       	ldi	r24, 0x70	; 112
+ 6c2:	92 e0       	ldi	r25, 0x02	; 2
+ 6c4:	21 50       	subi	r18, 0x01	; 1
+ 6c6:	80 40       	sbci	r24, 0x00	; 0
+ 6c8:	90 40       	sbci	r25, 0x00	; 0
+ 6ca:	e1 f7       	brne	.-8      	; 0x6c4 <play_floor_reach_tone+0x24>
+ 6cc:	00 c0       	rjmp	.+0      	; 0x6ce <play_floor_reach_tone+0x2e>
+ 6ce:	00 00       	nop
+    _delay_ms(50);
+    beep(200);
+ 6d0:	88 ec       	ldi	r24, 0xC8	; 200
+ 6d2:	0e 94 60 01 	call	0x2c0	; 0x2c0 <beep>
+ 6d6:	08 95       	ret
+
+000006d8 <handle_command>:
+}
+
+// Handle received command
+void handle_command(void) {
+    switch (command) {
+ 6d8:	e0 91 0d 01 	lds	r30, 0x010D	; 0x80010d <command>
+ 6dc:	8e 2f       	mov	r24, r30
+ 6de:	90 e0       	ldi	r25, 0x00	; 0
+ 6e0:	8b 30       	cpi	r24, 0x0B	; 11
+ 6e2:	91 05       	cpc	r25, r1
+ 6e4:	08 f0       	brcs	.+2      	; 0x6e8 <handle_command+0x10>
+ 6e6:	51 c0       	rjmp	.+162    	; 0x78a <handle_command+0xb2>
+ 6e8:	fc 01       	movw	r30, r24
+ 6ea:	e4 5c       	subi	r30, 0xC4	; 196
+ 6ec:	ff 4f       	sbci	r31, 0xFF	; 255
+ 6ee:	0c 94 ee 03 	jmp	0x7dc	; 0x7dc <__tablejump2__>
+        case CMD_IDLE:
+            // Turn off movement LED
+            MOVEMENT_LED_PORT &= ~(1 << MOVEMENT_LED_PIN);
+ 6f2:	85 b1       	in	r24, 0x05	; 5
+ 6f4:	8e 7f       	andi	r24, 0xFE	; 254
+ 6f6:	85 b9       	out	0x05, r24	; 5
+            emergency_state = 0;
+ 6f8:	10 92 09 01 	sts	0x0109, r1	; 0x800109 <emergency_state>
+            break;
+ 6fc:	46 c0       	rjmp	.+140    	; 0x78a <handle_command+0xb2>
+            
+        case CMD_MOVING_UP:
+        case CMD_MOVING_DOWN:
+            // Turn on movement LED
+            MOVEMENT_LED_PORT |= (1 << MOVEMENT_LED_PIN);
+ 6fe:	85 b1       	in	r24, 0x05	; 5
+ 700:	81 60       	ori	r24, 0x01	; 1
+ 702:	85 b9       	out	0x05, r24	; 5
+            break;
+ 704:	42 c0       	rjmp	.+132    	; 0x78a <handle_command+0xb2>
+            
+        case CMD_DOOR_OPEN:
+            // Turn on door LED
+            DOOR_LED_PORT |= (1 << DOOR_LED_PIN);
+ 706:	85 b1       	in	r24, 0x05	; 5
+ 708:	82 60       	ori	r24, 0x02	; 2
+ 70a:	85 b9       	out	0x05, r24	; 5
+            break;
+ 70c:	3e c0       	rjmp	.+124    	; 0x78a <handle_command+0xb2>
+            
+        case CMD_DOOR_CLOSE:
+            // Turn off door LED
+            DOOR_LED_PORT &= ~(1 << DOOR_LED_PIN);
+ 70e:	85 b1       	in	r24, 0x05	; 5
+ 710:	8d 7f       	andi	r24, 0xFD	; 253
+ 712:	85 b9       	out	0x05, r24	; 5
+            break;
+ 714:	3a c0       	rjmp	.+116    	; 0x78a <handle_command+0xb2>
+            
+        case CMD_EMERGENCY:
+            // Set emergency state and blink movement LED 3 times
+            emergency_state = 1;
+ 716:	81 e0       	ldi	r24, 0x01	; 1
+ 718:	80 93 09 01 	sts	0x0109, r24	; 0x800109 <emergency_state>
+            blink_movement_led(3);
+ 71c:	83 e0       	ldi	r24, 0x03	; 3
+ 71e:	0e 94 94 01 	call	0x328	; 0x328 <blink_movement_led>
+            break;
+ 722:	33 c0       	rjmp	.+102    	; 0x78a <handle_command+0xb2>
+            
+        case CMD_FAULT:
+            // Blink movement LED 3 times
+            blink_movement_led(3);
+ 724:	83 e0       	ldi	r24, 0x03	; 3
+ 726:	0e 94 94 01 	call	0x328	; 0x328 <blink_movement_led>
+            break;
+ 72a:	2f c0       	rjmp	.+94     	; 0x78a <handle_command+0xb2>
+            
+        case CMD_PLAY_MELODY:
+            // Start playing emergency melody
+            // For "Final level", melody plays continuously until stopped
+            play_emergency_melody();
+ 72c:	0e 94 74 02 	call	0x4e8	; 0x4e8 <play_emergency_melody>
+            break;
+ 730:	2c c0       	rjmp	.+88     	; 0x78a <handle_command+0xb2>
+            
+        case CMD_STOP_MELODY:
+            // Stop the melody
+            stop_melody();
+ 732:	0e 94 a5 02 	call	0x54a	; 0x54a <stop_melody>
+            break;
+ 736:	29 c0       	rjmp	.+82     	; 0x78a <handle_command+0xb2>
+            
+        case CMD_FLOOR_REACHED:
+            // Turn off movement LED and play floor reach tone
+            MOVEMENT_LED_PORT &= ~(1 << MOVEMENT_LED_PIN);
+ 738:	85 b1       	in	r24, 0x05	; 5
+ 73a:	8e 7f       	andi	r24, 0xFE	; 254
+ 73c:	85 b9       	out	0x05, r24	; 5
+            play_floor_reach_tone();
+ 73e:	0e 94 50 03 	call	0x6a0	; 0x6a0 <play_floor_reach_tone>
+            break;
+ 742:	23 c0       	rjmp	.+70     	; 0x78a <handle_command+0xb2>
+            
+        case CMD_MAINTENANCE:
+            // Enter maintenance mode - blink both LEDs twice
+            for (uint8_t i = 0; i < 2; i++) {
+                MOVEMENT_LED_PORT |= (1 << MOVEMENT_LED_PIN);
+ 744:	95 b1       	in	r25, 0x05	; 5
+ 746:	91 60       	ori	r25, 0x01	; 1
+ 748:	95 b9       	out	0x05, r25	; 5
+                DOOR_LED_PORT |= (1 << DOOR_LED_PIN);
+ 74a:	95 b1       	in	r25, 0x05	; 5
+ 74c:	92 60       	ori	r25, 0x02	; 2
+ 74e:	95 b9       	out	0x05, r25	; 5
+ 750:	2f ef       	ldi	r18, 0xFF	; 255
+ 752:	35 ea       	ldi	r19, 0xA5	; 165
+ 754:	9e e0       	ldi	r25, 0x0E	; 14
+ 756:	21 50       	subi	r18, 0x01	; 1
+ 758:	30 40       	sbci	r19, 0x00	; 0
+ 75a:	90 40       	sbci	r25, 0x00	; 0
+ 75c:	e1 f7       	brne	.-8      	; 0x756 <handle_command+0x7e>
+ 75e:	00 c0       	rjmp	.+0      	; 0x760 <handle_command+0x88>
+ 760:	00 00       	nop
+                _delay_ms(300);
+                MOVEMENT_LED_PORT &= ~(1 << MOVEMENT_LED_PIN);
+ 762:	95 b1       	in	r25, 0x05	; 5
+ 764:	9e 7f       	andi	r25, 0xFE	; 254
+ 766:	95 b9       	out	0x05, r25	; 5
+                DOOR_LED_PORT &= ~(1 << DOOR_LED_PIN);
+ 768:	95 b1       	in	r25, 0x05	; 5
+ 76a:	9d 7f       	andi	r25, 0xFD	; 253
+ 76c:	95 b9       	out	0x05, r25	; 5
+ 76e:	2f ef       	ldi	r18, 0xFF	; 255
+ 770:	35 ea       	ldi	r19, 0xA5	; 165
+ 772:	9e e0       	ldi	r25, 0x0E	; 14
+ 774:	21 50       	subi	r18, 0x01	; 1
+ 776:	30 40       	sbci	r19, 0x00	; 0
+ 778:	90 40       	sbci	r25, 0x00	; 0
+ 77a:	e1 f7       	brne	.-8      	; 0x774 <handle_command+0x9c>
+ 77c:	00 c0       	rjmp	.+0      	; 0x77e <handle_command+0xa6>
+ 77e:	00 00       	nop
+            play_floor_reach_tone();
+            break;
+            
+        case CMD_MAINTENANCE:
+            // Enter maintenance mode - blink both LEDs twice
+            for (uint8_t i = 0; i < 2; i++) {
+ 780:	8f 5f       	subi	r24, 0xFF	; 255
+ 782:	01 c0       	rjmp	.+2      	; 0x786 <handle_command+0xae>
+    beep(200);
+}
+
+// Handle received command
+void handle_command(void) {
+    switch (command) {
+ 784:	80 e0       	ldi	r24, 0x00	; 0
+            play_floor_reach_tone();
+            break;
+            
+        case CMD_MAINTENANCE:
+            // Enter maintenance mode - blink both LEDs twice
+            for (uint8_t i = 0; i < 2; i++) {
+ 786:	82 30       	cpi	r24, 0x02	; 2
+ 788:	e8 f2       	brcs	.-70     	; 0x744 <handle_command+0x6c>
+            // Unknown command - do nothing
+            break;
+    }
+    
+    // Reset command received flag
+    command_received = 0;
+ 78a:	10 92 0b 01 	sts	0x010B, r1	; 0x80010b <command_received>
+ 78e:	08 95       	ret
+
+00000790 <main>:
+}
+
+// Main function
+int main(void) {
+    // Initialize system
+    system_init();
+ 790:	0e 94 3c 02 	call	0x478	; 0x478 <system_init>
+    
+    // Main loop
+    while (1) {
+        // Handle command if one was received
+        if (command_received) {
+ 794:	80 91 0b 01 	lds	r24, 0x010B	; 0x80010b <command_received>
+ 798:	81 11       	cpse	r24, r1
+            handle_command();
+ 79a:	0e 94 6c 03 	call	0x6d8	; 0x6d8 <handle_command>
+        }
+        
+        // If in emergency state and LED is not currently blinking, keep it blinking
+        if (emergency_state && !(MOVEMENT_LED_PORT & (1 << MOVEMENT_LED_PIN))) {
+ 79e:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <emergency_state>
+ 7a2:	88 23       	and	r24, r24
+ 7a4:	b9 f3       	breq	.-18     	; 0x794 <main+0x4>
+ 7a6:	28 99       	sbic	0x05, 0	; 5
+ 7a8:	f5 cf       	rjmp	.-22     	; 0x794 <main+0x4>
+            // Blink the LED if it's not already on from another operation
+            MOVEMENT_LED_PORT |= (1 << MOVEMENT_LED_PIN);
+ 7aa:	85 b1       	in	r24, 0x05	; 5
+ 7ac:	81 60       	ori	r24, 0x01	; 1
+ 7ae:	85 b9       	out	0x05, r24	; 5
+ 7b0:	2f ef       	ldi	r18, 0xFF	; 255
+ 7b2:	89 e6       	ldi	r24, 0x69	; 105
+ 7b4:	98 e1       	ldi	r25, 0x18	; 24
+ 7b6:	21 50       	subi	r18, 0x01	; 1
+ 7b8:	80 40       	sbci	r24, 0x00	; 0
+ 7ba:	90 40       	sbci	r25, 0x00	; 0
+ 7bc:	e1 f7       	brne	.-8      	; 0x7b6 <main+0x26>
+ 7be:	00 c0       	rjmp	.+0      	; 0x7c0 <main+0x30>
+ 7c0:	00 00       	nop
+            _delay_ms(500);
+            MOVEMENT_LED_PORT &= ~(1 << MOVEMENT_LED_PIN);
+ 7c2:	85 b1       	in	r24, 0x05	; 5
+ 7c4:	8e 7f       	andi	r24, 0xFE	; 254
+ 7c6:	85 b9       	out	0x05, r24	; 5
+ 7c8:	2f ef       	ldi	r18, 0xFF	; 255
+ 7ca:	89 e6       	ldi	r24, 0x69	; 105
+ 7cc:	98 e1       	ldi	r25, 0x18	; 24
+ 7ce:	21 50       	subi	r18, 0x01	; 1
+ 7d0:	80 40       	sbci	r24, 0x00	; 0
+ 7d2:	90 40       	sbci	r25, 0x00	; 0
+ 7d4:	e1 f7       	brne	.-8      	; 0x7ce <main+0x3e>
+ 7d6:	00 c0       	rjmp	.+0      	; 0x7d8 <main+0x48>
+ 7d8:	00 00       	nop
+ 7da:	dc cf       	rjmp	.-72     	; 0x794 <main+0x4>
+
+000007dc <__tablejump2__>:
+ 7dc:	ee 0f       	add	r30, r30
+ 7de:	ff 1f       	adc	r31, r31
+ 7e0:	05 90       	lpm	r0, Z+
+ 7e2:	f4 91       	lpm	r31, Z
+ 7e4:	e0 2d       	mov	r30, r0
+ 7e6:	09 94       	ijmp
+
+000007e8 <__umulhisi3>:
+ 7e8:	a2 9f       	mul	r26, r18
+ 7ea:	b0 01       	movw	r22, r0
+ 7ec:	b3 9f       	mul	r27, r19
+ 7ee:	c0 01       	movw	r24, r0
+ 7f0:	a3 9f       	mul	r26, r19
+ 7f2:	70 0d       	add	r23, r0
+ 7f4:	81 1d       	adc	r24, r1
+ 7f6:	11 24       	eor	r1, r1
+ 7f8:	91 1d       	adc	r25, r1
+ 7fa:	b2 9f       	mul	r27, r18
+ 7fc:	70 0d       	add	r23, r0
+ 7fe:	81 1d       	adc	r24, r1
+ 800:	11 24       	eor	r1, r1
+ 802:	91 1d       	adc	r25, r1
+ 804:	08 95       	ret
+
+00000806 <_exit>:
+ 806:	f8 94       	cli
+
+00000808 <__stop_program>:
+ 808:	ff cf       	rjmp	.-2      	; 0x808 <__stop_program>

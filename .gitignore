@@ -1,0 +1,25 @@
+# Ignore Visual Studio folder
+.vs/
+
+# Ignore Arduino build files and folders
+build/
+*.bin
+*.hex
+*.elf
+*.eep
+*.map
+
+# Ignore temporary files
+*.tmp
+*.log
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE/editor folders
+.vscode/
+.idea/
+
+# Ignore dependency folders (if any, like node_modules)
+node_modules/
